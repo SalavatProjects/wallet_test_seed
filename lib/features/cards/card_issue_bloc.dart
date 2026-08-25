@@ -23,7 +23,8 @@ class CardIssueState {
 class CardIssueBloc extends Bloc<CardIssueEvent, CardIssueState> {
   CardIssueBloc({
     required ICardIssuer issuer,
-  }) : _issuer = issuer {
+  })  : _issuer = issuer,
+        super(const CardIssueState()) {
     on<IssueTapped>(_onIssueTapped);
   }
 
