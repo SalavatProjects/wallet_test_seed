@@ -82,6 +82,9 @@ void registerAppDependencies() {
   if (!sl.isRegistered<AppRouter>()) {
     sl.registerLazySingleton<AppRouter>(
       () => AppRouter(),
+      dispose: (appRouter) {
+        appRouter.dispose();
+      },
     );
   }
 }
