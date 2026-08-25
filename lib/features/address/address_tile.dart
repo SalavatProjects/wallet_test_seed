@@ -53,7 +53,7 @@ class _AddressTileState extends State<AddressTile> {
         return Container(
           height: AppTokens.cellHeight,
           padding: const EdgeInsets.symmetric(
-              horizontal: AppTokens.horizontalPadding,
+            horizontal: AppTokens.horizontalPadding,
           ),
           color: AppTokens.surface,
           child: Row(
@@ -69,6 +69,7 @@ class _AddressTileState extends State<AddressTile> {
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontSize: 12,
+                        height: 1,
                         color: AppTokens.textSecondary,
                       ),
                     ),
@@ -78,6 +79,7 @@ class _AddressTileState extends State<AddressTile> {
                       maxLines: 1,
                       style: const TextStyle(
                         fontSize: 14,
+                        height: 1,
                         color: AppTokens.textPrimary,
                       ),
                       overflow: TextOverflow.ellipsis,
@@ -86,7 +88,6 @@ class _AddressTileState extends State<AddressTile> {
                 ),
               ),
               const SizedBox(width: AppTokens.gapTextIcon),
-
               SizedBox.square(
                 dimension: AppTokens.tapTarget,
                 child: IconButton(

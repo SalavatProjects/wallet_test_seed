@@ -1,6 +1,6 @@
 String formatAddressForCell(String address, double textScaleFactor) {
   const prefix = '0x';
-  
+
   final hasPrefix = address.startsWith(prefix);
   final mainPart = hasPrefix ? address.substring(prefix.length) : address;
 
