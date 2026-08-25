@@ -12,5 +12,5 @@ String formatAddressForCell(String address, double textScaleFactor) {
   final leadingPart = mainPart.substring(0, leadingLength);
   final trailingPart = mainPart.substring(mainPart.length - 4);
 
-  return '${hasPrefix ? prefix : ''}$leadingPart...$trailingPart';
+  return '${hasPrefix ? prefix : ''}$leadingPart…$trailingPart';
 }

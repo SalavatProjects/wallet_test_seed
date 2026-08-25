@@ -77,4 +77,12 @@ class AddressTileBloc extends Bloc<AddressTileEvent, AddressTileState> {
   ) async {
     emit(const AddressTileState());
   }
+
+  @override
+  Future<void> close() {
+    _resetTimer?.cancel();
+    _resetTimer = null;
+
+    return super.close();
+  }
 }

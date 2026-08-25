@@ -15,7 +15,7 @@ void main() {
           formatAddressForCell(
               '0x1234567890abcdef1234567890abcdef12345678',
               1.0),
-          '0x123456...5678'
+          '0x123456…5678'
       );
     });
 
@@ -24,7 +24,7 @@ void main() {
           formatAddressForCell(
               '0x1234567890abcdef1234567890abcdef12345678',
               2.0),
-          '0x1234...5678'
+          '0x1234…5678'
       );
     });
 
@@ -33,7 +33,7 @@ void main() {
           formatAddressForCell(
               '0x1234567890abcdef1234567890abcdef12345678',
               1.6),
-          '0x1234...5678'
+          '0x1234…5678'
       );
     });
 
@@ -42,7 +42,7 @@ void main() {
           formatAddressForCell(
               '1234567890abcdef',
               1.0),
-          '123456...cdef'
+          '123456…cdef'
       );
     });
     
@@ -50,7 +50,7 @@ void main() {
       final result = formatAddressForCell('0xabcdef1234567890', 1.0);
 
       expect(result, startsWith('0x'));
-      expect(result, '0xabcdef...7890');
+      expect(result, '0xabcdef…7890');
     });
     
     test('address with exactly 12 main characters is not changed', () {
@@ -63,7 +63,7 @@ void main() {
     test('scale below 1.6 still uses 6 + 4 format', () {
       expect(
           formatAddressForCell('1234567890abcdef', 1.59),
-          '123456...cdef',
+          '123456…cdef',
       );
     });
   });
