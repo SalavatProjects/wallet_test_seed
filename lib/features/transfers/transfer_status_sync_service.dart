@@ -23,8 +23,6 @@ class TransferStatusSyncService {
       cancelToken: cancelToken,
     );
 
-    print(response.data);
-
     final status = TransferStatus.fromName(
       response.data['status'] as String? ?? 'unknown',
     );

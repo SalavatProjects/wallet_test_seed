@@ -27,7 +27,7 @@ class _CardIssuePageState extends State<CardIssuePage> {
   }
 
   Future<void> _issue() async {
-    await _bloc.add(
+    _bloc.add(
       IssueTapped(
         CardIssueRequest(cardId: widget.cardId),
       ),
